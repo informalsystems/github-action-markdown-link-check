@@ -1,4 +1,4 @@
-name: 'markdown-link-check'
+name: 'informal-markdown-link-check'
 description: 'Check if all links are valid in markdown files.'
 author: 'Gaurav Nelson'
 branding:
@@ -33,9 +33,9 @@ inputs:
     default: 'no'
   base-branch:
     description: 'Use this to specify the base branch against which the action
-    finds the modififed files.'
+    finds the modified files.'
     required: true
-    default: 'master'
+    default: 'main'
   file-extension:
     description: 'Use this to specify the file extension of Markdown files.'
     required: true
