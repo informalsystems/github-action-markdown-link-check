@@ -1,11 +1,16 @@
-on: [pull_request]
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
 name: PR Checks
 jobs:
   markdown-link-check:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: markdown-link-check
+    - name: informal-markdown-link-check
       uses: ./
       with:
         check-modified-files-only: 'yes'
@@ -13,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: markdown-link-check
+    - name: informal-markdown-link-check
       uses: ./
       with:
         # Add a test to restrict the test to just dir4 and dir5.
